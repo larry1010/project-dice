@@ -22,3 +22,9 @@ $("#resources-link").click(function () {
 $("#feature-link").click(function () {
     hidePassphraseContainer();
 });
+
+$("#random-bit-generator").click(function(){
+	alert('test 2');
+   $("#random-bit-generator output").first().attr('value', 20);
+   document.getElementById('bit_output').value = 'test';
+});
