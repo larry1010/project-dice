@@ -27,13 +27,11 @@ $("#feature-link").click(function () {
 function randomNumberFunction() {
     var localRandomNumber = Math.floor((Math.random() * 6) + 1);
     console.log("Random Number: " + localRandomNumber);
+    $("#random-numbers").append(localRandomNumber);
 }
 
-// randomNumberFunction();
-$("#random-numbers").html();
 // =====================================================================================
 // GENERATE BUTTON ON CLICK
 $("#generate-button").click(function () {
     randomNumberFunction();
-    
 });

@@ -2,6 +2,18 @@ body {
     background-color: lightgrey;
 }
 
+#navigation-links-container {
+    border: thick black solid;
+    background-color: black;
+    padding: 5px;
+}
+.navigation-links {
+    border: thin black solid;
+    background-color: white;
+    padding: 5px;
+    /* margin: 5px; */
+}
+
 #index-title {
     opacity: 1;
     transition: opacity .25s ease-in-out;
