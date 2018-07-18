@@ -22,3 +22,18 @@ $("#resources-link").click(function () {
 $("#feature-link").click(function () {
     hidePassphraseContainer();
 });
+// =====================================================================================
+// RANDOM NUMBER GENERATOR
+function randomNumberFunction() {
+    var localRandomNumber = Math.floor((Math.random() * 99999) + 1);
+    console.log("Random Number: " + localRandomNumber);
+}
+
+// randomNumberFunction();
+$("#random-numbers").html();
+// =====================================================================================
+// GENERATE BUTTON ON CLICK
+$("#generate-button").click(function () {
+    randomNumberFunction();
+    
+});
