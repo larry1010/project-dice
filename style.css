@@ -3,5 +3,12 @@ body {
 }
 
 #index-title {
-transition: 1000ms;
+    opacity: 1;
+    transition: opacity .25s ease-in-out;
+    -moz-transition: opacity .25s ease-in-out;
+    -webkit-transition: opacity .25s ease-in-out;
+}
+
+#index-title:hover {
+    opacity: 0.5;
 }
