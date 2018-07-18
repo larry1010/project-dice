@@ -25,7 +25,7 @@ $("#feature-link").click(function () {
 // =====================================================================================
 // RANDOM NUMBER GENERATOR
 function randomNumberFunction() {
-    var localRandomNumber = Math.floor((Math.random() * 99999) + 1);
+    var localRandomNumber = Math.floor((Math.random() * 6) + 1);
     console.log("Random Number: " + localRandomNumber);
 }
 
