@@ -1,10 +1,24 @@
-console.log("hello world");
-document.querySelectorAll("div");
+// =====================================================================================
+// ON LOAD
+$("#passphrase-generator-container").hide();
+$("#resources-container").hide();
 
-function hideResourcesContainer () {
-    $("#resources-container").toggle();
+// =====================================================================================
+// NAVIGATION
+function hideResourcesContainer() {
+    $("#resources-container").show();
+    $("#passphrase-generator-container").hide();
 }
 
-$("#resources-link").click(function(){
+function hidePassphraseContainer() {
+    $("#passphrase-generator-container").show();
+    $("#resources-container").hide();
+}
+
+$("#resources-link").click(function () {
     hideResourcesContainer();
+});
+
+$("#feature-link").click(function () {
+    hidePassphraseContainer();
 });
