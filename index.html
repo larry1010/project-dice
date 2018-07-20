@@ -13,14 +13,14 @@
 
 <body>
     <header>
-        <div id="navigation-links">
-            <a id="home-link" href="./index.html">Home</a>
-            <a id="feature-link" href="#">Passphrase Generator</a>
-            <a id="resources-link" href="#">Resources</a>
-	    <a id="random-bit-generator" href="#">Random Bit Generator</a>
+        <div id="navigation-links-container">
+            <a class="navigation-links" id="home-link" href="./index.html">Home</a>
+            <a class="navigation-links" id="feature-link" href="#">Passphrase Generator</a>
+            <a class="navigation-links" id="resources-link" href="#">Resources</a>
         </div>
     </header>
     <h1 id="index-title">Web Dicing Application</h1>
+    <!-- ............................................................................................................................................................ -->
     <div id="concept-container">
         <h2>
             Concept
@@ -34,23 +34,26 @@
             </li>
         </ul>
     </div>
+    <img src="./assets/images/Drawing1.svg" alt="graph">
     <hr>
-    <div id="resources-container" class="container">
+    <!-- ............................................................................................................................................................ -->
+    <div id="passphrase-generator-container">
         <h2>
-            Resources
+            Passphrase Generator
         </h2>
         <ul>
             <li>
-                <a href="https://en.wikipedia.org/wiki/Diceware" target="_blank">https://en.wikipedia.org/wiki/Diceware</a>
-            </li>
-            <li>
-                <a href="http://world.std.com/~reinhold/diceware.html" target="_blank">http://world.std.com/~reinhold/diceware.html</a>
+                <a href="https://www.eff.org/deeplinks/2016/07/new-wordlists-random-passphrases" target="_blank">https://www.eff.org/deeplinks/2016/07/new-wordlists-random-passphrases</a>
             </li>
         </ul>
+        <div id="random-numbers"></div>
+        <br>
+        <button id="generate-button">Generate</button>
     </div>
-    <div id="passphrase-generator-container" class="container">
+    <!-- ............................................................................................................................................................ -->
+    <div id="resources-container">
         <h2>
-            Passphrase Generator
+            Resources
         </h2>
         <ul>
             <li>
