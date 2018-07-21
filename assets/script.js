@@ -22,6 +22,7 @@ $("#resources-link").click(function () {
 $("#feature-link").click(function () {
     hidePassphraseContainer();
 });
+
 // =====================================================================================
 // RANDOM NUMBER GENERATOR
 function randomNumberFunction() {
@@ -43,11 +44,20 @@ $("#generate-button").click(function () {
 // =====================================================================================
 // CONVERT 6 RANDOM NUMBERS INTO A SINGLE NUMBER
 // var lookUpValue = the random 6 numbers generated above;
-function checkRandomNumbersDiv () {
+function checkRandomNumbersDiv() {
     var lookUpValue = $("#random-numbers").html()
     console.log(lookUpValue);
 }
 
+// =====================================================================================
+randomNumberFunction();
+
+//Generate a random bit
+$("#random-bit-generator").click(function () {
+    alert('test 2');
+    $("#random-bit-generator output").first().attr('value', 20);
+    document.getElementById('bit_output').value = 'test';
+});
 
 // =====================================================================================
 // CONVERT 6 RANDOM NUMBERS INTO A SINGLE NUMBER
@@ -69,3 +79,4 @@ function checkRandomNumbersDiv () {
 // https://www.w3schools.com/js/js_objects.asp
 // https://repl.it/repls/PleasingTrickyBrowser
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys
+
