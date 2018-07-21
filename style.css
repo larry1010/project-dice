@@ -1,11 +1,12 @@
 body {
     background-color: lightgrey;
+
 }
 
-#navigation-links-container {
-    border: thick black solid;
+header, #navigation-links-container {
+    /* border: thick black solid; */
     background-color: black;
-    padding: 5px;
+    padding: 10px;
 }
 .navigation-links {
     border: thin black solid;
