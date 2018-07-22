@@ -67,6 +67,10 @@ $("#random-bit-generator").click(function () {
 // =====================================================================================
 // Password requirements generator.
 
+// https://www.w3schools.com/js/js_strings.asp
+
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace
+
 // string to array, --> Object --> object name is the key --> Lookup
 // .replace /t with a space
 // console.log(i)
@@ -80,3 +84,6 @@ $("#random-bit-generator").click(function () {
 // https://repl.it/repls/PleasingTrickyBrowser
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys
 
+// =====================================================================================
+// Git Resources
+// https://www.atlassian.com/git/tutorials/resetting-checking-out-and-reverting
