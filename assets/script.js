@@ -71,17 +71,22 @@ $("#random-bit-generator").click(function () {
 
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace
 
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
+
 // string to array, --> Object --> object name is the key --> Lookup
 // .replace /t with a space
 // console.log(i)
 // var res = str.replace("\t", " ");
 // console.log(i.replace("\t", " "));
 // .split(" ")
-// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
+
 // https://www.w3schools.com/jsref/jsref_replace.asp
 // https://www.w3schools.com/jsref/jsref_split.asp
+
 // https://www.w3schools.com/js/js_objects.asp
+
 // https://repl.it/repls/PleasingTrickyBrowser
+
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys
 
 // =====================================================================================
