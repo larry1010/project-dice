@@ -7,8 +7,10 @@ $("#concept-container").hide();
 // =====================================================================================
 // NAVIGATION
 function hidePassphraseContainer() {
-    $("#generated-passphrases-container").show();
+    $("#passphrase-generator-container").show();
+    $("#generated-passphrases-conatiner").show();
     $("#generated-passphrases").show();
+    $("#passphrases-title").hide();
     $("#resources-container").hide();
     $("#concept-container").hide();
 }
