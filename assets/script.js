@@ -46,23 +46,40 @@ function randomNumberFunction() {
     $("#random-numbers").append(localRandomNumber);
 }
 
-function grabUserInputNumber() {
-    var userInputNumber = $("#user-input-number").val();
-    console.log(userInputNumber);
+// Why is it so hard to grab the number here and stick it somewhere else? Generate button click needs this value.
+// function grabUserInputNumber() {
+//     var userInputNumber = $("#user-input-number").val();
+//     console.log(userInputNumber);
+//     return userInputNumber;
+// }
 
-}
-
-// =====================================================================================
-// GENERATE BUTTON ON CLICK
-$("#generate-button").click(function () {
-    // ........................................................................
-    // LOOP RANDOM NUMBER FUNCTION
-    grabUserInputNumber();
+function generateRandomNumber() {
     $("#random-numbers").html("");
     for (var i = 0; i < 5; i++) {
         randomNumberFunction();
     }
-    checkRandomNumbersDiv();
+}
+
+function inputValidation () {
+    userInputNumber = parseInt($("#user-input-number").val());
+    if (isNaN(userInputNumber)) {
+        $("#random-numbers").html("<div style='background-color:red; color:yellow;'>"+"[Error: User input is not a number.]"+"</div>");
+        $("#user-input-number").val("");
+    }
+}
+
+// =====================================================================================
+// GENERATE BUTTON ON CLICK
+
+$("#generate-button").click(function () {
+    // var userInputNumber = parseInt($("#user-input-number").val());
+    inputValidation();
+    for (i = 0; i < userInputNumber; i++) {
+        // ........................................................................
+        // LOOP RANDOM NUMBER FUNCTION
+        generateRandomNumber();
+        checkRandomNumbersDiv();
+    }
 });
 
 // =====================================================================================
@@ -77,6 +94,7 @@ $("#clear-button").click(function () {
         $("#generated-passphrases").prepend(currentPassphrase + "<hr>");
         $("#random-numbers").html("");
         $("#passphrase").html("");
+        $("#user-input-number").val("");
     }
 });
 
