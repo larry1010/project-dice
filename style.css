@@ -1,6 +1,6 @@
 body {
     background-color: lightgrey;
-
+text-align: center;
 }
 
 header, #navigation-links-container {
@@ -24,4 +24,9 @@ header, #navigation-links-container {
 
 #index-title:hover {
     opacity: 0.5;
+}
+
+#generate-button, #clear-button {
+    width: 150px;
+    height: 70px;
 }
