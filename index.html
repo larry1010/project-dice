@@ -18,8 +18,9 @@
         <div id="navigation-links-container">
             <a class="navigation-links" id="home-link" href="./index.html">Home</a>
             <a class="navigation-links" id="feature-link" href="#">Passphrase Generator</a>
+            <a class="navigation-links" id="concept-link" href="#">Concept and Design</a>
             <a class="navigation-links" id="resources-link" href="#">Resources</a>
-	    <a class="navigation-links" id="generate-random-bit" href="#">Generate Random Bit</a><!--Unused-->
+            <!--Unused-->
         </div>
     </header>
     <h1 id="index-title">Web Dicing Application</h1>
@@ -30,20 +31,20 @@
         </h2>
         <ul>
         </ul>
+        <img src="./assets/images/Drawing1.svg" alt="graph">
     </div>
-    <img src="./assets/images/Drawing1.svg" alt="graph">
-    <hr>
     <!-- ............................................................................................................................................................ -->
     <div id="passphrase-generator-container">
         <h2>
             Passphrase Generator
         </h2>
-        <h3>Random 5 Digit String</h3>
+        <button id="generate-button">Generate</button>
+        <button id="clear-button">Save and Clear</button>
+        <h3>Random Number String</h3>
         <div id="random-numbers"></div>
         <h3>Passphrase</h3>
         <div id="passphrase"></div>
         <br>
-        <button id="generate-button">Generate</button>
     </div>
     <!-- ............................................................................................................................................................ -->
     <div id="resources-container">
@@ -69,11 +70,11 @@
             </li>
         </ul>
     </div>
-    <div id="random-bit-container" class="container">
-        <h2>
-        	Random Bit Generator
-        </h2>
-	<output id='bit_output' style='border: 1px black solid'></output>
+    <hr>
+    <div id='generated-passphrases'>
+        <h3>
+            Generated Passphrases
+        </h3>
     </div>
 
     <!-- ================================================================================================================================================================================ -->
@@ -93,7 +94,7 @@
     <!-- ............................................................................................................................................................ -->
     <!-- JavaScript -->
     <script src="./assets/wordList.js"></script>
-    <script src="./assets/wordListConversion.js"></script>
+    <!-- <script src="./assets/wordListConversion.js"></script> -->
     <script src="./assets/script.js"></script>
 </body>
 

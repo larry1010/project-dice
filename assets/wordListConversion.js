@@ -7789,3 +7789,24 @@ var i = `
 // // var u = t.split("\n")
 // console.log(t);
 // // console.log(u);
+// // ===============================================
+
+// console.log(i);
+// var t = i.replace(/\t/g, ",").replace(/\n/g, ",");
+var t = i.replace(/\t/g,":").replace(/\n/g,",");
+var u = t.split(",");
+// console.log(t);
+//'11351:agreeably'
+function extract_pair_info(pair){
+  var _num = pair.substring(0,5);
+  var _word = pair.substring(6,pair.length);
+  return {numeral: _num, word: _word}
+}
+
+var all_data = []
+for (var i = 0; i < u.length; i++){
+  pair_info = extract_pair_info(u[i])
+  all_data[pair_info.numeral] = pair_info.word;
+}
+
+console.log(all_data);

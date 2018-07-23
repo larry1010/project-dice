@@ -1,3 +1,4 @@
+// console.log("wordList.js");
 var wordList = {
     "11111": "abacus",
     "11112": "abdomen",

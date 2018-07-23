@@ -1,18 +1,28 @@
 // =====================================================================================
 // ON LOAD
-$("#passphrase-generator-container").hide();
+// $("#passphrase-generator-container").show();
 $("#resources-container").hide();
+$("#concept-container").hide();
 
 // =====================================================================================
 // NAVIGATION
 function hideResourcesContainer() {
     $("#resources-container").show();
     $("#passphrase-generator-container").hide();
+    $("#concept-container").hide();
 }
 
 function hidePassphraseContainer() {
     $("#passphrase-generator-container").show();
     $("#resources-container").hide();
+    $("#concept-container").hide();
+}
+
+function hideConceptContainer() {
+    $("#concept-container").show();
+    $("#resources-container").hide();
+    $("#passphrase-generator-container").hide();
+    $("#generated-passphrases").hide();
 }
 
 $("#resources-link").click(function () {
@@ -21,6 +31,10 @@ $("#resources-link").click(function () {
 
 $("#feature-link").click(function () {
     hidePassphraseContainer();
+});
+
+$("#concept-link").click(function () {
+    hideConceptContainer();
 });
 
 // =====================================================================================
@@ -41,6 +55,22 @@ $("#generate-button").click(function () {
     }
     checkRandomNumbersDiv();
 });
+
+// =====================================================================================
+// SAVE AND CLEAR BUTTON ON CLICK
+$("#clear-button").click(function () {
+    var blankCheck = $("#random-numbers").html();
+    if (blankCheck == "") {
+    } else {
+        // ........................................................................
+        // LOOP RANDOM NUMBER FUNCTION
+        var currentPassphrase = $("#passphrase").html();
+        $("#generated-passphrases").append(currentPassphrase + "<hr>");
+        $("#random-numbers").html("");
+        $("#passphrase").html("");
+    }
+});
+
 // =====================================================================================
 // CONVERT 6 RANDOM NUMBERS INTO A SINGLE NUMBER
 // var lookUpValue = the random 6 numbers generated above;
@@ -50,7 +80,6 @@ function checkRandomNumbersDiv() {
     // Append word from lookUpValue
     var passphrase = wordList[lookUpValue];
     $("#passphrase").append(passphrase);
-    $("#bit_output").append(passphrase);
 }
 
 // =====================================================================================
@@ -62,13 +91,6 @@ function checkRandomNumbersDiv() {
 // $("#random-bit-generator output").first().attr('value', 20);
 // document.getElementById('bit_output').value = 'test';
 // });
-// =====================================================================================
-
-
-
-
-
-
 
 // =====================================================================================
 // CONVERT 6 RANDOM NUMBERS INTO A SINGLE NUMBER
@@ -97,6 +119,7 @@ function checkRandomNumbersDiv() {
 // https://www.w3schools.com/js/js_objects.asp
 
 // https://repl.it/repls/PleasingTrickyBrowser
+// https://repl.it/repls/UnlinedCrazyRam
 
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys
 
