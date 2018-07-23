@@ -51,7 +51,9 @@ $("#concept-link").click(function () {
 function randomNumberFunction() {
     var localRandomNumber = Math.floor(Math.random() * 6 + 1);
     $("#random-numbers").append(localRandomNumber);
+    return localRandomNumber;
 }
+
 
 // ?????????????????????????????????????????????????????????????????????????????????????????????????????????????????
 // Why is it so hard to grab the number here and stick it somewhere else? Generate button click needs this value.
@@ -64,8 +66,10 @@ function randomNumberFunction() {
 function generateRandomNumber() {
     $("#random-numbers").html("");
     for (var i = 0; i < 5; i++) {
-        randomNumberFunction();
+        var random = []randomNumberFunction();
     }
+    var randomArray = [1,2,3,4,5];
+    return randomArray;
 }
 
 function inputValidation() {
@@ -88,7 +92,7 @@ $("#generate-button").click(function () {
     for (i = 0; i < userInputNumber; i++) {
         // ........................................................................
         // LOOP RANDOM NUMBER FUNCTION
-        generateRandomNumber();
+        var returnedArrayVar = generateRandomNumbergenerateRandomNumber();
         checkRandomNumbersDiv();
     }
 });
