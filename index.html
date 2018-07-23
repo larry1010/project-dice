@@ -41,6 +41,11 @@
         <h4>
             (Recommended 6 word passphrase for 77 bits of entropy.)
         </h4>
+        <div>
+            <!-- Validation needed for input field. Only numbers 6 to 20 allowed -->
+            <input id="user-input-number" type="text" placeholder="Enter #">
+        </div>
+        <br>
         <button id="generate-button">Generate</button>
         <button id="clear-button">Save and Clear</button>
         <h3>Random Number String</h3>
@@ -50,6 +55,9 @@
         </h3>
         <div id="passphrase"></div>
         <br>
+        <!-- Show graphically the strength of the password generated. -->
+        <h3>Strength</h3>
+        <div id="passphrase-strength"></div>
     </div>
     <!-- ............................................................................................................................................................ -->
     <div id="resources-container">
@@ -69,10 +77,12 @@
         <a href="https://github.com/larry1010/project-dice" target="_blank">https://github.com/larry1010/project-dice</a>
     </div>
     <hr>
-    <div id='generated-passphrases'>
+    <div>
         <h3>
             Generated Passphrases
         </h3>
+        <div id='generated-passphrases'>
+        </div>
     </div>
 
     <!-- ================================================================================================================================================================================ -->

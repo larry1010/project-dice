@@ -10,6 +10,10 @@ header,
     padding: 10px;
 }
 
+#random-numbers, #passphrase {
+    background-color: lightgreen;
+}
+
 .navigation-links {
     border: thin black solid;
     background-color: white;
