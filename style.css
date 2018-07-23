@@ -11,8 +11,12 @@ header, #navigation-links-container {
 .navigation-links {
     border: thin black solid;
     background-color: white;
-    padding: 5px;
-    /* margin: 5px; */
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: 5px; 
+    margin-right : 5px;
+    margin-top: 0px;
+    margin-bottom: 0px;
 }
 
 #index-title {
