@@ -10,10 +10,12 @@ function hideResourcesContainer() {
     $("#resources-container").show();
     $("#passphrase-generator-container").hide();
     $("#concept-container").hide();
+    $("#generated-passphrases").hide();
 }
 
 function hidePassphraseContainer() {
     $("#passphrase-generator-container").show();
+    $("#generated-passphrases").show();
     $("#resources-container").hide();
     $("#concept-container").hide();
 }
