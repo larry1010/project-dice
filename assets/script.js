@@ -6,15 +6,8 @@ $("#concept-container").hide();
 
 // =====================================================================================
 // NAVIGATION
-function hideResourcesContainer() {
-    $("#resources-container").show();
-    $("#passphrase-generator-container").hide();
-    $("#concept-container").hide();
-    $("#generated-passphrases").hide();
-}
-
 function hidePassphraseContainer() {
-    $("#passphrase-generator-container").show();
+    $("#generated-passphrases-container").show();
     $("#generated-passphrases").show();
     $("#resources-container").hide();
     $("#concept-container").hide();
@@ -24,8 +17,20 @@ function hideConceptContainer() {
     $("#concept-container").show();
     $("#resources-container").hide();
     $("#passphrase-generator-container").hide();
+    $("#generated-passphrases-conatiner").hide();
     $("#generated-passphrases").hide();
+    $("#passphrases-title").hide();
 }
+
+function hideResourcesContainer() {
+    $("#resources-container").show();
+    $("#passphrase-generator-container").hide();
+    $("#concept-container").hide();
+    $("#generated-passphrases-conatiner").hide();
+    $("#generated-passphrases").hide();
+    $("#passphrases-title").hide();
+}
+
 
 $("#resources-link").click(function () {
     hideResourcesContainer();
