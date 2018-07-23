@@ -81,7 +81,7 @@ function checkRandomNumbersDiv() {
     // ...........................................................................
     // Append word from lookUpValue
     var passphrase = wordList[lookUpValue];
-    $("#passphrase").append(passphrase);
+    $("#passphrase").append(passphrase + " ");
 }
 
 // =====================================================================================
