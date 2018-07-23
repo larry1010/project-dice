@@ -66,6 +66,10 @@ function inputValidation () {
         $("#random-numbers").html("<div style='background-color:red; color:yellow;'>"+"[Error: User input is not a number.]"+"</div>");
         $("#user-input-number").val("");
     }
+    // else if (userInputNumber === null) {
+    //     $("#random-numbers").html("<div style='background-color:red; color:yellow;'>"+"[Error: Input field is blank.]"+"</div>");
+    //     $("#user-input-number").val("");
+    // }
 }
 
 // =====================================================================================
