@@ -44,11 +44,13 @@
         <div>
             <!-- Validation needed for input field. Only numbers 6 to 20 allowed -->
             <!-- http://javascript-coder.com/html-form/javascript-form-validation.phtml -->
-            <input id="user-input-number" type="text" placeholder="Enter #">
+            <input id="user-input-number" type="number" placeholder="Enter #">
+            <div id="error-container"></div>
         </div>
         <br>
         <button id="generate-button">Generate</button>
         <button id="clear-button">Save and Clear</button>
+        <!-- Get rid of random number string. Have it only show up as a variable in the JavaScript. -->
         <h3>Random Number String</h3>
         <div id="random-numbers"></div>
         <h3>

@@ -63,13 +63,12 @@ function generateRandomNumber() {
 function inputValidation () {
     userInputNumber = parseInt($("#user-input-number").val());
     if (isNaN(userInputNumber)) {
-        $("#random-numbers").html("<div style='background-color:red; color:yellow;'>"+"[Error: User input is not a number.]"+"</div>");
+        $("#error-container").html("<div style='background-color:red; color:yellow;'>"+"[Error: User input is not a number.]"+"</div>");
         $("#user-input-number").val("");
     }
-    // else if (userInputNumber === null) {
-    //     $("#random-numbers").html("<div style='background-color:red; color:yellow;'>"+"[Error: Input field is blank.]"+"</div>");
-    //     $("#user-input-number").val("");
-    // }
+    else {
+        $("#error-container").html("");
+    }
 }
 
 // =====================================================================================

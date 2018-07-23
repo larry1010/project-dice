@@ -36,6 +36,11 @@ header,
     opacity: 0.5;
 }
 
+#user-input-number {
+    width: 75px;
+    height: 30px;
+}
+
 #generate-button,
 #clear-button {
     width: 150px;
