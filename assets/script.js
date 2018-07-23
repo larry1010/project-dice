@@ -36,7 +36,7 @@ $("#generate-button").click(function () {
     // ........................................................................
     // LOOP RANDOM NUMBER FUNCTION
     $("#random-numbers").html("");
-    for (var i = 0; i < 6; i++) {
+    for (var i = 0; i < 5; i++) {
         randomNumberFunction();
     }
     checkRandomNumbersDiv();
@@ -46,18 +46,29 @@ $("#generate-button").click(function () {
 // var lookUpValue = the random 6 numbers generated above;
 function checkRandomNumbersDiv() {
     var lookUpValue = $("#random-numbers").html()
-    console.log(lookUpValue);
+    // ...........................................................................
+    // Append word from lookUpValue
+    var passphrase = wordList[lookUpValue];
+    $("#passphrase").append(passphrase);
+    $("#bit_output").append(passphrase);
 }
 
 // =====================================================================================
-randomNumberFunction();
+// randomNumberFunction();
 
 //Generate a random bit
-$("#random-bit-generator").click(function () {
-    alert('test 2');
-    $("#random-bit-generator output").first().attr('value', 20);
-    document.getElementById('bit_output').value = 'test';
-});
+// $("#random-bit-generator").click(function () {
+// alert('test 2');
+// $("#random-bit-generator output").first().attr('value', 20);
+// document.getElementById('bit_output').value = 'test';
+// });
+// =====================================================================================
+
+
+
+
+
+
 
 // =====================================================================================
 // CONVERT 6 RANDOM NUMBERS INTO A SINGLE NUMBER
@@ -92,3 +103,9 @@ $("#random-bit-generator").click(function () {
 // =====================================================================================
 // Git Resources
 // https://www.atlassian.com/git/tutorials/resetting-checking-out-and-reverting
+
+// =====================================================================================
+// Convert list to JSON
+// Used Excel to convert list to CSV.
+// Used CSV to JSON online converter to convert CSV to JSON had to use transpose to get object in key:value pair.
+// https://www.csvjson.com/csv2json

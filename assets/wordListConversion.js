@@ -7776,8 +7776,16 @@ var i = `
 66665	zoology
 66666	zoom
 `;
-// console.log(i.split());
-console.log(i);
-var j = i.replace(/(?:\r\n|\r|\n)/g, '');
-// var k = j.replace()
-console.log(j);
+// // console.log(i.split());
+// console.log(i);
+// var j = i.replace(/(?:\r\n|\r|\n)/g, '');
+// // var k = j.replace()
+// console.log(j);
+
+// // ===============================================
+// console.log(i);
+// // var t = i.replace(/\t/g, ",").replace(/\n/g, ",");
+// var t = i.replace(/\t/g,":")//.replace(/\n/g,",");
+// // var u = t.split("\n")
+// console.log(t);
+// // console.log(u);
