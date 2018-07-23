@@ -1,20 +1,22 @@
 body {
     background-color: lightgrey;
-text-align: center;
+    text-align: center;
 }
 
-header, #navigation-links-container {
+header,
+#navigation-links-container {
     /* border: thick black solid; */
     background-color: black;
     padding: 10px;
 }
+
 .navigation-links {
     border: thin black solid;
     background-color: white;
     padding-left: 10px;
     padding-right: 10px;
-    margin-left: 5px; 
-    margin-right : 5px;
+    margin-left: 5px;
+    margin-right: 5px;
     margin-top: 0px;
     margin-bottom: 0px;
 }
@@ -30,7 +32,8 @@ header, #navigation-links-container {
     opacity: 0.5;
 }
 
-#generate-button, #clear-button {
+#generate-button,
+#clear-button {
     width: 150px;
     height: 70px;
 }
