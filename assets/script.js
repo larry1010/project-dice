@@ -66,10 +66,10 @@ function randomNumberFunction() {
 function generateRandomNumber() {
     $("#random-numbers").html("");
     for (var i = 0; i < 5; i++) {
-        var random = []randomNumberFunction();
+        // var random = []randomNumberFunction();
     }
-    var randomArray = [1,2,3,4,5];
-    return randomArray;
+    // var randomArray = [1,2,3,4,5];
+    // return randomArray;
 }
 
 function inputValidation() {
@@ -92,7 +92,7 @@ $("#generate-button").click(function () {
     for (i = 0; i < userInputNumber; i++) {
         // ........................................................................
         // LOOP RANDOM NUMBER FUNCTION
-        var returnedArrayVar = generateRandomNumbergenerateRandomNumber();
+        // var returnedArrayVar = generateRandomNumbergenerateRandomNumber();
         checkRandomNumbersDiv();
     }
 });
