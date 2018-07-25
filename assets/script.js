@@ -10,7 +10,7 @@ function hidePassphraseContainer() {
     $("#passphrase-generator-container").show();
     $("#generated-passphrases-conatiner").show();
     $("#generated-passphrases").show();
-    $("#passphrases-title").hide();
+    $("#passphrases-title").show();
     $("#resources-container").hide();
     $("#concept-container").hide();
 }
@@ -33,7 +33,6 @@ function hideResourcesContainer() {
     $("#passphrases-title").hide();
 }
 
-
 $("#resources-link").click(function () {
     hideResourcesContainer();
 });
@@ -54,7 +53,6 @@ function randomNumberFunction() {
     return localRandomNumber;
 }
 
-
 // ?????????????????????????????????????????????????????????????????????????????????????????????????????????????????
 // Why is it so hard to grab the number here and stick it somewhere else? Generate button click needs this value.
 // function grabUserInputNumber() {
@@ -62,23 +60,28 @@ function randomNumberFunction() {
 //     console.log(userInputNumber);
 //     return userInputNumber;
 // }
+var randomArray = [];
+// return randomArray;
 
 function generateRandomNumber() {
     $("#random-numbers").html("");
     for (var i = 0; i < 5; i++) {
-        // var random = []randomNumberFunction();
+        var random = randomNumberFunction();
+        console.log("generateRandomNumber: " + random);
+        return random;
     }
-    // var randomArray = [1,2,3,4,5];
-    // return randomArray;
 }
 
 function inputValidation() {
     userInputNumber = parseInt($("#user-input-number").val());
     if (isNaN(userInputNumber)) {
-        $("#error-container").html("<div style='background-color:red; color:yellow;'>" + "[Error: User input is not a number.]" + "</div>");
+        $("#error-container").html(
+            "<div style='background-color:red; color:yellow;'>" +
+            "[Error: User input is not a number.]" +
+            "</div>"
+        );
         $("#user-input-number").val("");
-    }
-    else {
+    } else {
         $("#error-container").html("");
     }
 }
@@ -87,12 +90,16 @@ function inputValidation() {
 // GENERATE BUTTON ON CLICK
 
 $("#generate-button").click(function () {
+    randomArray.push(generateRandomNumber());
+    console.log("randomArray: " + randomArray);
     // var userInputNumber = parseInt($("#user-input-number").val());
     inputValidation();
     for (i = 0; i < userInputNumber; i++) {
         // ........................................................................
         // LOOP RANDOM NUMBER FUNCTION
         // var returnedArrayVar = generateRandomNumbergenerateRandomNumber();
+        randomNumberFunction();
+        generateRandomNumber();
         checkRandomNumbersDiv();
     }
 });
@@ -117,7 +124,8 @@ $("#clear-button").click(function () {
 // CONVERT 6 RANDOM NUMBERS INTO A SINGLE NUMBER
 // var lookUpValue = the random 6 numbers generated above;
 function checkRandomNumbersDiv() {
-    var lookUpValue = $("#random-numbers").html();
+    // var lookUpValue = $("#random-numbers").html();
+    var lookUpValue = 111111;
     // ...........................................................................
     // Append word from lookUpValue
     var passphrase = wordList[lookUpValue];

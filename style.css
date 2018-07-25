@@ -1,3 +1,7 @@
+#concept-container, #resources-container {
+    display: none;
+}
+
 body {
     background-color: lightgrey;
     text-align: center;
