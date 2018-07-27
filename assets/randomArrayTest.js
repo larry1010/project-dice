@@ -3,8 +3,8 @@ function checkInputFieldNumber() {
     var inputFieldNumber = $("#user-input-number").val();
     if (inputFieldNumber == "") {
         $("#error-container").html("");
-    } else if (inputFieldNumber < 6 || inputFieldNumber > 50) {
-        $("#error-container").html("Number out of range.");
+    } else if (inputFieldNumber < 6 || inputFieldNumber > 30) {
+        $("#error-container").html("ERROR: Number out of range. Please enter a number between 6 and 30.");
         return false;
     }
 }
