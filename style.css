@@ -1,5 +1,44 @@
+#passphrase-save {
+    background-color: greenyellow;
+    /* font-size: 15px; */
+}
+
+#error-container {
+    background-color: red;
+    color: yellow;
+}
+
+#concept-container,
+#resources-container {
+    display: none;
+}
+
 body {
     background-color: lightgrey;
+    text-align: center;
+}
+
+header,
+#navigation-links-container {
+    /* border: thick black solid; */
+    background-color: black;
+    padding: 10px;
+}
+
+#random-numbers,
+#passphrase {
+    background-color: lightgreen;
+}
+
+.navigation-links {
+    border: thin black solid;
+    background-color: white;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 0px;
+    margin-bottom: 0px;
 }
 
 #index-title {
@@ -11,4 +50,15 @@ body {
 
 #index-title:hover {
     opacity: 0.5;
+}
+
+#user-input-number {
+    width: 75px;
+    height: 30px;
+}
+
+#generate-button,
+#clear-button {
+    width: 150px;
+    height: 70px;
 }

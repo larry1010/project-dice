@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta author="Lawrence,Raymond">
     <title>Web Dicing Application</title>
     <!-- ================================================================================================================================================================================ -->
     <!-- CSS -->
@@ -12,57 +13,87 @@
 </head>
 
 <body>
+    <div id="top-banner"></div>
     <header>
-        <div id="navigation-links">
-            <a id="home-link" href="./index.html">Home</a>
-            <a id="feature-link" href="#">Passphrase Generator</a>
-            <a id="resources-link" href="#">Resources</a>
+        <div id="navigation-links-container">
+            <!-- <a class="navigation-links" id="home-link" href="./index.html">Home</a> -->
+            <a class="navigation-links" id="feature-link" href="#">Home</a>
+            <a class="navigation-links" id="concept-link" href="#">Concept and Design</a>
+            <a class="navigation-links" id="resources-link" href="#">Resources</a>
+            <!--Unused-->
         </div>
     </header>
     <h1 id="index-title">Web Dicing Application</h1>
-    <!-- ............................................................................................................................................................ -->
-    <div id="concept-container">
-        <h2>
-            Concept
-        </h2>
-        <ul>
-            <li>
-                <a href="https://larry1010.github.io/project-dice/" target="_blank">https://larry1010.github.io/project-dice/</a>
-            </li>
-            <li>
-                <a href="https://github.com/larry1010/project-dice" target="_blank">https://github.com/larry1010/project-dice</a>
-            </li>
-        </ul>
-    </div>
-    <img src="./assets/images/Drawing1.svg" alt="graph">
-    <hr>
     <!-- ............................................................................................................................................................ -->
     <div id="passphrase-generator-container">
         <h2>
             Passphrase Generator
         </h2>
-        <ul>
-            <li>
-                <a href="https://www.eff.org/deeplinks/2016/07/new-wordlists-random-passphrases" target="_blank">https://www.eff.org/deeplinks/2016/07/new-wordlists-random-passphrases</a>
-            </li>
-        </ul>
-        <div id="random-numbers"></div>
+        <!-- <h4>
+            (Recommended 6 word passphrase for 77 bits of entropy.)
+        </h4> -->
+        <div>
+            <!-- ????????????????????????????????????????????????????????????????????????????????????????????????????????????????? -->
+            <!-- Validation needed for input field. Only numbers 6 to 20 allowed -->
+            <!-- http://javascript-coder.com/html-form/javascript-form-validation.phtml -->
+            <div>How many random words do you want to generate?</div>
+            <br>
+            <input id="user-input-number" type="text" pattern="\d*" min="6" max="50" maxlength="2" placeholder="Enter #">
+            <div id="error-container"></div>
+        </div>
+        <br>
         <button id="generate-button">Generate</button>
+        <!-- <button id="clear-button">Save and Clear</button> -->
+
+        <!-- ????????????????????????????????????????????????????????????????????????????????????????????????????????????????? -->
+        <!-- Get rid of random number string. Have it only show up as a variable in the JavaScript. -->
+        <!-- <h3>Random Number String</h3> -->
+        <!-- <div id="random-numbers"></div> -->
+        <h3>
+            Passphrase
+        </h3>
+        <div id="passphrase"></div>
+        <div id="passphrase-save"></div>
+        <br>
+
+        <!-- ????????????????????????????????????????????????????????????????????????????????????????????????????????????????? -->
+        <!-- Show graphically the strength of the password generated. -->
+        <!-- <h3>Strength</h3> -->
+        <!-- <div id="passphrase-strength"></div> -->
+    </div>
+    <!-- ............................................................................................................................................................ -->
+    <div id="concept-container" class="test">
+        <h2>
+            Concept and Design
+        </h2>
+        <ul>
+        </ul>
+        <img src="./assets/images/Drawing1.svg" alt="graph">
     </div>
     <!-- ............................................................................................................................................................ -->
     <div id="resources-container">
         <h2>
             Resources
         </h2>
-        <ul>
-            <li>
-                <a href="https://en.wikipedia.org/wiki/Diceware" target="_blank">https://en.wikipedia.org/wiki/Diceware</a>
-            </li>
-            <li>
-                <a href="http://world.std.com/~reinhold/diceware.html" target="_blank">http://world.std.com/~reinhold/diceware.html</a>
-            </li>
-        </ul>
+        <a href="https://en.wikipedia.org/wiki/Diceware" target="_blank">https://en.wikipedia.org/wiki/Diceware</a>
+        <br>
+        <a href="http://world.std.com/~reinhold/diceware.html" target="_blank">http://world.std.com/~reinhold/diceware.html</a>
+        <br>
+        <a href="https://passwordcreator.org/" target="_blank">https://passwordcreator.org/</a>
+        <br>
+        <a href="https://www.eff.org/deeplinks/2016/07/new-wordlists-random-passphrases" target="_blank">https://www.eff.org/deeplinks/2016/07/new-wordlists-random-passphrases</a>
+        <hr>
+        <a href="https://larry1010.github.io/project-dice/" target="_blank">https://larry1010.github.io/project-dice/</a>
+        <br>
+        <a href="https://github.com/larry1010/project-dice" target="_blank">https://github.com/larry1010/project-dice</a>
+        <hr>
     </div>
+    <!-- <div id="generated-passphrases-container"> -->
+    <!-- <h3 id="passphrases-title"> -->
+    <!-- Generated Passphrases -->
+    <!-- </h3> -->
+    <!-- <div id="generated-passphrases"></div> -->
+    <!-- </div> -->
 
     <!-- ================================================================================================================================================================================ -->
     <!-- ............................................................................................................................................................ -->
@@ -80,7 +111,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.js"></script>
     <!-- ............................................................................................................................................................ -->
     <!-- JavaScript -->
+    <script src="./assets/wordList.js"></script>
+    <!-- <script src="./assets/wordListConversion.js"></script> -->
     <script src="./assets/script.js"></script>
+    <script src="./assets/randomArrayTest.js"></script>
 </body>
 
 </html>
