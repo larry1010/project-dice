@@ -1,3 +1,8 @@
+#passphrase-save {
+    background-color:greenyellow;
+    /* font-size: 15px; */
+}
+
 #concept-container, #resources-container {
     display: none;
 }
