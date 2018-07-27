@@ -1,3 +1,12 @@
+// Press 'ENTER' to add button on focus.
+// https://www.w3schools.com/howto/howto_js_trigger_button_enter.asp
+$("#user-input-number").keyup(function (event) {
+    event.preventDefault();
+    if (event.keyCode === 13) {
+        document.getElementById("generate-button").click();
+    }
+});
+
 // GENERATES A SINGLE RANDOM NUMBER BETWEEN 1 AND 6
 function checkInputFieldNumber() {
     var inputFieldNumber = $("#user-input-number").val();
