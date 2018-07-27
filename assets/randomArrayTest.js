@@ -95,7 +95,7 @@ function savePassphrase() {
     // LOOP RANDOM NUMBER FUNCTION
     var currentPassphrase = $("#passphrase").html();
     if (currentPassphrase !== "") {
-        $("#passphrase-save").prepend("<div>"+currentPassphrase+"</div><hr>");
+        $("#passphrase-save").prepend("<div>" + currentPassphrase + "</div><hr>");
         // $("#generated-passphrases").prepend(currentPassphrase + "<hr>");
         $("#passphrase").html("");
         $("#user-input-number").val("");

@@ -7,42 +7,42 @@ $("#concept-container").hide();
 // =====================================================================================
 // NAVIGATION
 function hidePassphraseContainer() {
-    $("#passphrase-generator-container").show();
-    $("#generated-passphrases-conatiner").show();
-    $("#generated-passphrases").show();
-    $("#passphrases-title").show();
-    $("#resources-container").hide();
-    $("#concept-container").hide();
+  $("#passphrase-generator-container").show();
+  $("#generated-passphrases-conatiner").show();
+  $("#generated-passphrases").show();
+  $("#passphrases-title").show();
+  $("#resources-container").hide();
+  $("#concept-container").hide();
 }
 
 function hideConceptContainer() {
-    $("#concept-container").show();
-    $("#resources-container").hide();
-    $("#passphrase-generator-container").hide();
-    $("#generated-passphrases-conatiner").hide();
-    $("#generated-passphrases").hide();
-    $("#passphrases-title").hide();
+  $("#concept-container").show();
+  $("#resources-container").hide();
+  $("#passphrase-generator-container").hide();
+  $("#generated-passphrases-conatiner").hide();
+  $("#generated-passphrases").hide();
+  $("#passphrases-title").hide();
 }
 
 function hideResourcesContainer() {
-    $("#resources-container").show();
-    $("#passphrase-generator-container").hide();
-    $("#concept-container").hide();
-    $("#generated-passphrases-conatiner").hide();
-    $("#generated-passphrases").hide();
-    $("#passphrases-title").hide();
+  $("#resources-container").show();
+  $("#passphrase-generator-container").hide();
+  $("#concept-container").hide();
+  $("#generated-passphrases-conatiner").hide();
+  $("#generated-passphrases").hide();
+  $("#passphrases-title").hide();
 }
 
-$("#resources-link").click(function () {
-    hideResourcesContainer();
+$("#resources-link").click(function() {
+  hideResourcesContainer();
 });
 
-$("#feature-link").click(function () {
-    hidePassphraseContainer();
+$("#feature-link").click(function() {
+  hidePassphraseContainer();
 });
 
-$("#concept-link").click(function () {
-    hideConceptContainer();
+$("#concept-link").click(function() {
+  hideConceptContainer();
 });
 
 // // =====================================================================================

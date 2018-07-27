@@ -1,9 +1,10 @@
 #passphrase-save {
-    background-color:greenyellow;
+    background-color: greenyellow;
     /* font-size: 15px; */
 }
 
-#concept-container, #resources-container {
+#concept-container,
+#resources-container {
     display: none;
 }
 
@@ -19,7 +20,8 @@ header,
     padding: 10px;
 }
 
-#random-numbers, #passphrase {
+#random-numbers,
+#passphrase {
     background-color: lightgreen;
 }
 
