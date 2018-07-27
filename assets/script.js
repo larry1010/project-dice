@@ -7,50 +7,50 @@ $("#concept-container").hide();
 // =====================================================================================
 // NAVIGATION
 function hidePassphraseContainer() {
-    $("#passphrase-generator-container").show();
-    $("#generated-passphrases-conatiner").show();
-    $("#generated-passphrases").show();
-    $("#passphrases-title").show();
-    $("#resources-container").hide();
-    $("#concept-container").hide();
+  $("#passphrase-generator-container").show();
+  $("#generated-passphrases-conatiner").show();
+  $("#generated-passphrases").show();
+  $("#passphrases-title").show();
+  $("#resources-container").hide();
+  $("#concept-container").hide();
 }
 
 function hideConceptContainer() {
-    $("#concept-container").show();
-    $("#resources-container").hide();
-    $("#passphrase-generator-container").hide();
-    $("#generated-passphrases-conatiner").hide();
-    $("#generated-passphrases").hide();
-    $("#passphrases-title").hide();
+  $("#concept-container").show();
+  $("#resources-container").hide();
+  $("#passphrase-generator-container").hide();
+  $("#generated-passphrases-conatiner").hide();
+  $("#generated-passphrases").hide();
+  $("#passphrases-title").hide();
 }
 
 function hideResourcesContainer() {
-    $("#resources-container").show();
-    $("#passphrase-generator-container").hide();
-    $("#concept-container").hide();
-    $("#generated-passphrases-conatiner").hide();
-    $("#generated-passphrases").hide();
-    $("#passphrases-title").hide();
+  $("#resources-container").show();
+  $("#passphrase-generator-container").hide();
+  $("#concept-container").hide();
+  $("#generated-passphrases-conatiner").hide();
+  $("#generated-passphrases").hide();
+  $("#passphrases-title").hide();
 }
 
-$("#resources-link").click(function () {
-    hideResourcesContainer();
+$("#resources-link").click(function() {
+  hideResourcesContainer();
 });
 
-$("#feature-link").click(function () {
-    hidePassphraseContainer();
+$("#feature-link").click(function() {
+  hidePassphraseContainer();
 });
 
-$("#concept-link").click(function () {
-    hideConceptContainer();
+$("#concept-link").click(function() {
+  hideConceptContainer();
 });
 
 // =====================================================================================
 // RANDOM NUMBER GENERATOR
 function randomNumberFunction() {
-    var localRandomNumber = Math.floor(Math.random() * 6 + 1);
-    $("#random-numbers").append(localRandomNumber);
-    return localRandomNumber;
+  var localRandomNumber = Math.floor(Math.random() * 6 + 1);
+  $("#random-numbers").append(localRandomNumber);
+  return localRandomNumber;
 }
 
 // ?????????????????????????????????????????????????????????????????????????????????????????????????????????????????
@@ -64,72 +64,72 @@ var randomArray = [];
 // return randomArray;
 
 function generateRandomNumber() {
-    $("#random-numbers").html("");
-    for (var i = 0; i < 5; i++) {
-        var random = randomNumberFunction();
-        console.log("generateRandomNumber: " + random);
-        return random;
-    }
+  $("#random-numbers").html("");
+  for (var i = 0; i < 5; i++) {
+    var random = randomNumberFunction();
+    console.log("generateRandomNumber: " + random);
+    return random;
+  }
 }
 
 function inputValidation() {
-    userInputNumber = parseInt($("#user-input-number").val());
-    if (isNaN(userInputNumber)) {
-        $("#error-container").html(
-            "<div style='background-color:red; color:yellow;'>" +
-            "[Error: User input is not a number.]" +
-            "</div>"
-        );
-        $("#user-input-number").val("");
-    } else {
-        $("#error-container").html("");
-    }
+  userInputNumber = parseInt($("#user-input-number").val());
+  if (isNaN(userInputNumber)) {
+    $("#error-container").html(
+      "<div style='background-color:red; color:yellow;'>" +
+        "[Error: User input is not a number.]" +
+        "</div>"
+    );
+    $("#user-input-number").val("");
+  } else {
+    $("#error-container").html("");
+  }
 }
 
 // =====================================================================================
 // GENERATE BUTTON ON CLICK
 
-$("#generate-button").click(function () {
-    randomArray.push(generateRandomNumber());
-    console.log("randomArray: " + randomArray);
-    // var userInputNumber = parseInt($("#user-input-number").val());
-    inputValidation();
-    for (i = 0; i < userInputNumber; i++) {
-        // ........................................................................
-        // LOOP RANDOM NUMBER FUNCTION
-        // var returnedArrayVar = generateRandomNumbergenerateRandomNumber();
-        randomNumberFunction();
-        generateRandomNumber();
-        checkRandomNumbersDiv();
-    }
+$("#generate-button").click(function() {
+  randomArray.push(generateRandomNumber());
+  console.log("randomArray: " + randomArray);
+  // var userInputNumber = parseInt($("#user-input-number").val());
+  inputValidation();
+  for (i = 0; i < userInputNumber; i++) {
+    // ........................................................................
+    // LOOP RANDOM NUMBER FUNCTION
+    // var returnedArrayVar = generateRandomNumbergenerateRandomNumber();
+    randomNumberFunction();
+    generateRandomNumber();
+    checkRandomNumbersDiv();
+  }
 });
 
 // =====================================================================================
 // SAVE AND CLEAR BUTTON ON CLICK
-$("#clear-button").click(function () {
-    var blankCheck = $("#random-numbers").html();
-    if (blankCheck == "") {
-    } else {
-        // ........................................................................
-        // LOOP RANDOM NUMBER FUNCTION
-        var currentPassphrase = $("#passphrase").html();
-        $("#generated-passphrases").prepend(currentPassphrase + "<hr>");
-        $("#random-numbers").html("");
-        $("#passphrase").html("");
-        $("#user-input-number").val("");
-    }
+$("#clear-button").click(function() {
+  var blankCheck = $("#random-numbers").html();
+  if (blankCheck == "") {
+  } else {
+    // ........................................................................
+    // LOOP RANDOM NUMBER FUNCTION
+    var currentPassphrase = $("#passphrase").html();
+    $("#generated-passphrases").prepend(currentPassphrase + "<hr>");
+    $("#random-numbers").html("");
+    $("#passphrase").html("");
+    $("#user-input-number").val("");
+  }
 });
 
 // =====================================================================================
 // CONVERT 6 RANDOM NUMBERS INTO A SINGLE NUMBER
 // var lookUpValue = the random 6 numbers generated above;
 function checkRandomNumbersDiv() {
-    // var lookUpValue = $("#random-numbers").html();
-    var lookUpValue = 111111;
-    // ...........................................................................
-    // Append word from lookUpValue
-    var passphrase = wordList[lookUpValue];
-    $("#passphrase").append(passphrase + " ");
+  // var lookUpValue = $("#random-numbers").html();
+  var lookUpValue = 111111;
+  // ...........................................................................
+  // Append word from lookUpValue
+  var passphrase = wordList[lookUpValue];
+  $("#passphrase").append(passphrase + " ");
 }
 
 // =====================================================================================
