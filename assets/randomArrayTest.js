@@ -53,32 +53,35 @@ function matchNumberStringToWordlist() {
 
 // =====================================================================================
 // GENERATE BUTTON ON CLICK
-userInputNumber = parseInt($("#user-input-number").val());
 
 $("#generate-button").click(function () {
+    userInputNumber = parseInt($("#user-input-number").val());
 
-    console.log("randomNumberFunction: " + randomNumberFunction());
+    // console.log("randomNumberFunction: " + randomNumberFunction());
 
-    generateFiveRandomNumbers();
-    console.log("randomFiveNumbersArray: " + randomFiveNumbersArray);
+    for (i=0; i < userInputNumber; i++) {
 
-    joinFiveRandomNumbers();
-    // Why does declaring "var" not work the the following line???
-    // var returnedLookupValueString = joinFiveRandomNumbers();
-    returnedLookupValueString = joinFiveRandomNumbers();
-    console.log("returnedLookupValueString: " + returnedLookupValueString);
-
-    pushFiveNumberStringArray();
-    console.log("lookupValueArray: " + lookupValueArray);
-
-    matchNumberStringToWordlist();
-
-    randomFiveNumbersArray = [];
-    lookupValueArray = [];
-
-
-    // randomArray.push(generateRandomNumber());
-    // console.log("randomArray: " + randomArray);
+        generateFiveRandomNumbers();
+        console.log("randomFiveNumbersArray: " + randomFiveNumbersArray);
+        
+        joinFiveRandomNumbers();
+        // Why does declaring "var" not work the the following line???
+        // var returnedLookupValueString = joinFiveRandomNumbers();
+        returnedLookupValueString = joinFiveRandomNumbers();
+        console.log("returnedLookupValueString: " + returnedLookupValueString);
+        
+        pushFiveNumberStringArray();
+        console.log("lookupValueArray: " + lookupValueArray);
+        
+        matchNumberStringToWordlist();
+        
+        randomFiveNumbersArray = [];
+        lookupValueArray = [];
+    }
+        
+        
+        // randomArray.push(generateRandomNumber());
+        // console.log("randomArray: " + randomArray);
     // var userInputNumber = parseInt($("#user-input-number").val());
     // inputValidation();
     // for (i = 0; i < userInputNumber; i++) {
@@ -86,3 +89,14 @@ $("#generate-button").click(function () {
     // LOOP RANDOM NUMBER FUNCTION
     // var returnedArrayVar = generateRandomNumbergenerateRandomNumber();
 });
+
+// =====================================================================================
+$("#clear-button").click(function () {
+    console.log("click");
+        // ........................................................................
+        // LOOP RANDOM NUMBER FUNCTION
+        var currentPassphrase = $("#passphrase").html();
+        $("#generated-passphrases").prepend(currentPassphrase + "<hr>");
+        $("#passphrase").html("");
+        $("#user-input-number").val("");
+    });
