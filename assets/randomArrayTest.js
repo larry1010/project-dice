@@ -77,7 +77,7 @@ function matchNumberStringToWordlist() {
 
 $("#generate-button").click(function () {
 
-  if (checkInputFieldNumber() == false) {
+    if (checkInputFieldNumber() == false) {
         clearInputField(); // Do nothing.
     } else {
         clearErrorContainer();
@@ -127,7 +127,6 @@ $("#generate-button").click(function () {
             $("#user-input-number").val("");
         }
     }
-});
 
     userInputNumber = parseInt($("#user-input-number").val());
 
@@ -161,18 +160,19 @@ $("#generate-button").click(function () {
     // ........................................................................
     // LOOP RANDOM NUMBER FUNCTION
     // var returnedArrayVar = generateRandomNumbergenerateRandomNumber();
+    // });
 });
 
 // =====================================================================================
-function savePassphrase() {
-    // ........................................................................
-    // LOOP RANDOM NUMBER FUNCTION
-    var currentPassphrase = $("#passphrase").html();
-    if (currentPassphrase !== "") {
-        $("#passphrase-save").prepend("<div>" + currentPassphrase + "</div><hr>");
-        // $("#generated-passphrases").prepend(currentPassphrase + "<hr>");
-        $("#passphrase").html("");
-        $("#user-input-number").val("");
-    }
-}
+// function savePassphrase() {
+//     // ........................................................................
+//     // LOOP RANDOM NUMBER FUNCTION
+//     var currentPassphrase = $("#passphrase").html();
+//     if (currentPassphrase !== "") {
+//         $("#passphrase-save").prepend("<div>" + currentPassphrase + "</div><hr>");
+//         // $("#generated-passphrases").prepend(currentPassphrase + "<hr>");
+//         $("#passphrase").html("");
+//         $("#user-input-number").val("");
+//     }
+// }
 // });
