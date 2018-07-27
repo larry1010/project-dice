@@ -1,5 +1,4 @@
 // GENERATES A SINGLE RANDOM NUMBER BETWEEN 1 AND 6
-
 function checkInputFieldNumber() {
     var inputFieldNumber = $("#user-input-number").val();
     if (inputFieldNumber == "") {
@@ -78,7 +77,7 @@ function matchNumberStringToWordlist() {
 
 $("#generate-button").click(function () {
 
-    if (checkInputFieldNumber() == false) {
+  if (checkInputFieldNumber() == false) {
         clearInputField(); // Do nothing.
     } else {
         clearErrorContainer();
@@ -129,3 +128,51 @@ $("#generate-button").click(function () {
         }
     }
 });
+
+    userInputNumber = parseInt($("#user-input-number").val());
+
+    // console.log("randomNumberFunction: " + randomNumberFunction());
+
+    for (i = 0; i < userInputNumber; i++) {
+        generateFiveRandomNumbers();
+        console.log("randomFiveNumbersArray: " + randomFiveNumbersArray);
+
+        joinFiveRandomNumbers();
+        // Why does declaring "var" not work the the following line???
+        // var returnedLookupValueString = joinFiveRandomNumbers();
+        returnedLookupValueString = joinFiveRandomNumbers();
+        console.log("returnedLookupValueString: " + returnedLookupValueString);
+
+        pushFiveNumberStringArray();
+        console.log("lookupValueArray: " + lookupValueArray);
+
+        matchNumberStringToWordlist();
+
+        randomFiveNumbersArray = [];
+        lookupValueArray = [];
+    }
+    savePassphrase();
+
+    // randomArray.push(generateRandomNumber());
+    // console.log("randomArray: " + randomArray);
+    // var userInputNumber = parseInt($("#user-input-number").val());
+    // inputValidation();
+    // for (i = 0; i < userInputNumber; i++) {
+    // ........................................................................
+    // LOOP RANDOM NUMBER FUNCTION
+    // var returnedArrayVar = generateRandomNumbergenerateRandomNumber();
+});
+
+// =====================================================================================
+function savePassphrase() {
+    // ........................................................................
+    // LOOP RANDOM NUMBER FUNCTION
+    var currentPassphrase = $("#passphrase").html();
+    if (currentPassphrase !== "") {
+        $("#passphrase-save").prepend("<div>" + currentPassphrase + "</div><hr>");
+        // $("#generated-passphrases").prepend(currentPassphrase + "<hr>");
+        $("#passphrase").html("");
+        $("#user-input-number").val("");
+    }
+}
+// });
